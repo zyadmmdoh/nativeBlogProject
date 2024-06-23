@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+
+body {
+    background-color: black;
+    color: white;
+    display: grid;
+    font-family: sans-serif;
+    place-items: center;
+}
+
+.app-vedio {
+    position: relative;
+    height: 600px;
+    background-color: black;
+    overflow: scroll;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 20px;
+    margin-top: 20px;
+    scroll-snap-type: y mandatory;
+}
+
+.app-vedio::-webkit-scrollbar {
+    display: none;
+}
+
+.vedio {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    scroll-snap-align: start;
+}
+
+.vedio-player {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.footer {
+    display: flex;
+    position: relative;
+    bottom: 130px;
+    margin-left: 20px;
+}
+
+.img-marq {
+    display: flex;
+    align-items: center;
+    width: 390px;
+}
+
+.img-marq marquee {
+    margin-left: 3px;
+    margin-top: 20px;
+    width: 65%;
+}
+
+.img-marq img {
+    width: 40px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.image-play {
+    animation: rotate infinite 5s linear;
+    width: 55px;
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    border-radius: 50%;
+}
+
+.footer-text {
+    flex: 1;
+}
+
+.footer-text h3 {
+    padding-bottom: 30px;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+}
